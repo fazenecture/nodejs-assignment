@@ -4,12 +4,6 @@ import { IDataService } from "../interfaces/service.interface";
 dotenv.config();
 
 export class DataService implements IDataService {
-  public fetchBaseData = async (): Promise<any> => {
-    const BASE_URL: string = process.env.BASE_URL ?? "";
-    const response = await axios.get(BASE_URL);
-    return response.data;
-  };
-
   public fetchCharactersData = async (
     CHARACTER_API_URL: string,
     page?: number

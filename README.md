@@ -19,7 +19,6 @@ Start the server
 ### Environment Variables
 ```
 PORT=4000
-BASE_URL=https://rickandmortyapi.com/api
 EPISODE_URL=https://rickandmortyapi.com/api/episode
 CHARACTER_URL=https://rickandmortyapi.com/api/character
 ```

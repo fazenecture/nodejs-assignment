@@ -8,7 +8,7 @@ export class ControllerClass extends Helpers {
       const { page } = req.query;
       const results = await this.getAllCharactersData(parseInt(<string>page));
       const metaData: IMetaData = {
-        count: results.length,
+        count: results?.length,
         page: parseInt(<string>page),
       };
       console.log("✅ Results: ", results);

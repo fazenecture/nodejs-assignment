@@ -8,7 +8,7 @@ import { DataService } from "../services/data.service";
 
 export class Helpers extends DataService implements IHelper {
   public getAllCharactersData = async (page?: number): Promise<any> => {
-    const CHARACTER_API_URL = `${process.env.CHARACTER_URL!}`;
+    const CHARACTER_API_URL = process.env.CHARACTER_URL!;
     let data: any = [];
     const pagesCount = await this.fetchCharacterMeta(CHARACTER_API_URL);
     const promiseList: Promise<any>[] = [];
@@ -26,7 +26,7 @@ export class Helpers extends DataService implements IHelper {
         await data.push(...responseData);
       })
       .catch((error) => {
-        console.log("error: ", error);
+        throw new Error(error);
       });
 
     const { results } = await this.fetchEpisodeData(page ?? 1);
@@ -53,5 +53,4 @@ export class Helpers extends DataService implements IHelper {
       data: data,
     };
   };
-
 }
