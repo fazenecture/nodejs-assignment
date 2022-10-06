@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS vehicle (
     model VARCHAR(255) NOT NULL,
     plate_number VARCHAR(255) NOT NULL,
     id VARCHAR(255) NOT NULL PRIMARY,
+    created_at TIMESTAMP NOT NULL,
 );
 
 CREATE TABLE IF NOT EXISTS drive (
@@ -14,6 +15,7 @@ CREATE TABLE IF NOT EXISTS drive (
     distance INTEGER,
     id VARCHAR(255) NOT NULL PRIMARY,
     vehicle_id VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL
 );
 
 ALTER TABLE
@@ -25,17 +27,21 @@ CREATE TABLE IF NOT EXISTS addresses (
     street VARCHAR(255),
     city VARCHAR(255) NOT NULL,
     country VARCHAR(255) NOT NULL,
-    id VARCHAR(255) NOT NULL PRIMARY,
+    created_at TIMESTAMP NOT NULL,
+    id VARCHAR(255) NOT NULL PRIMARY
 );
 
 CREATE TABLE IF NOT EXISTS student (
     id VARCHAR(255) NOT NULL PRIMARY,
+    created_at TIMESTAMP NOT NULL,
     student_number VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS professor (
     id VARCHAR(255) NOT NULL PRIMARY,
-    salary INTEGER NOT NULL
+    salary INTEGER NOT NULL,
+    created_at TIMESTAMP NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS person (
@@ -46,6 +52,7 @@ CREATE TABLE IF NOT EXISTS person (
     address_id VARCHAR(255) NOT NULL,
     student_id VARCHAR(255),
     professor_id VARCHAR(255),
+    created_at TIMESTAMP NOT NULL
 );
 
 ALTER TABLE
