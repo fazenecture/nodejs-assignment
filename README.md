@@ -86,3 +86,9 @@ Cons for SDK :
 ### 3) For each option describe what are the cases the solution fits best?
 SDK can be used in cases where we need a complete development kit for software development for building applications for a specified platform, service or language.
 API can be used to create a communication between two platforms using HTTP requests, they can be used in use cases where we need to query data or create a backend for a platform.
+
+
+## Q4 Database Structure
+Made Relational database initial migration or dump.
+[Link to Code - migrations.sql](./q4-database/migrations.sql);
+
